@@ -28,9 +28,20 @@ for article in site_content.find_all('article'):
 	summary = summary.split('Read More')
 	summary = summary[0]
 
-	link = article.h2.a.text
+	link = article.h2.find('a', href=True)
+	link = link['href']
 	print(link)
+	print('')
+
+	# Check if data contains Python content.
+	if 'python' in header or 'python' in summary or 'Python' in header or 'Python' in summary:
+		print("Adding article...")
+		# Add data to csv file.
+		csv_writer.writerow([header, summary, link])
 
 	# print(header)
 	# print(summary)
 	# print()
+
+# Close the csv file.
+csv_file.close()
