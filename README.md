@@ -16,3 +16,4 @@ Download the files, go to terminal and simply run:
 ```
 python geeksScrape.py
 ```
+<img width=200px src="https://github.com/SlyCodePanda/Article-Scraper/blob/master/screenshot02.JPG" />
