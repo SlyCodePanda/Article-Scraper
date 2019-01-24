@@ -1,11 +1,11 @@
 '''
-	A scraper that looks for articles about Python and returns the title, info, and link.	
+	A scraper that looks for articles about Python and displays the title, info, and link in a html file.
 '''
 
 from bs4 import BeautifulSoup
 import requests
-import csv
 import pprint
+import os
 
 
 source = requests.get('https://www.geeksforgeeks.org/').text
@@ -13,10 +13,23 @@ source = requests.get('https://www.geeksforgeeks.org/').text
 
 soup = BeautifulSoup(source, 'lxml')
 
-csv_file = open('geeksScrape.csv', 'w')
-csv_writer = csv.writer(csv_file)
-csv_writer.writerow(['headline', 'summary', 'link'])
+# Creating a html file.
+file = open('geeksScrape.html', 'w+')
+file.write("""
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="geekScrape.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<title>Found Python Articles</title>
+</head>
+<body>
+	<img src="logo.png">
+	<h1>Geeks For Geeks - Python Articles</h1>
+	<br>
+	<br>""")
 
+# Finding portions of the site I want using soup.
 main = soup.find('div', class_='wrapper')
 
 site_content = main.find('div', class_='site-content')
@@ -30,18 +43,25 @@ for article in site_content.find_all('article'):
 
 	link = article.h2.find('a', href=True)
 	link = link['href']
-	print(link)
-	print('')
 
 	# Check if data contains Python content.
 	if 'python' in header or 'python' in summary or 'Python' in header or 'Python' in summary:
 		print("Adding article...")
-		# Add data to csv file.
-		csv_writer.writerow([header, summary, link])
+		# Add data to html file.
+		file.write('''
+	<h2>%s</h2>
+	<p>
+	%s<br>
+	<a href="%s" target="_blank">%s</a>
+	</p><br>''' % (header, summary, link, link))
+	
+file.write("""
+	
+</body>
+</html>""")
 
-	# print(header)
-	# print(summary)
-	# print()
+# Close the html file.
+file.close()
 
-# Close the csv file.
-csv_file.close()
+# Open the HTML file.
+os.startfile(r'D:\pythonStuff\learning\webScraping\geeksForGeeks_scrape\index.html')
