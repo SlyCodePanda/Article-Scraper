@@ -1,0 +1,22 @@
+Geeks For Geeks - Python Articles
+
+Python | Sentiment Analysis using VADER
+Sentiment Analysis is the process of ‘computationally’ determining whether a piece of writing is positive, negative or neutral. It’s also known as opinion mining, deriving… 
+https://www.geeksforgeeks.org/python-sentiment-analysis-using-vader/
+
+
+Python | Parse a website with regex and urllib
+Let’s discuss the concept of parsing using python. In python we have lot of modules but for parsing we only need urllib and re i.e… 
+https://www.geeksforgeeks.org/python-parse-a-website-with-regex-and-urllib/
+
+
+ML | Mini-Batch Gradient Descent with Python
+In machine learning, gradient descent is an optimization technique used for computing the model parameters (coefficients and bias) for algorithms like linear regression, logistic regression,… 
+https://www.geeksforgeeks.org/ml-mini-batch-gradient-descent-with-python/
+
+
+Amazon product price tracker using Python
+As we know Python is a multi-purpose language and widely used for scripting. We can write Python scripts to automate daily life task. Let’s say… 
+https://www.geeksforgeeks.org/amazon-product-price-tracker-using-python/
+
+
