@@ -8,10 +8,11 @@ To-Do
 ------
 * Scrape more than just the one site for articles.
 * Work on the over all display of the html file, it's not overly well formatted currently.
+* Test on Linux, I know it will have trouble when trying to run the os.startfile() line.
 
 # Usage
 ------
-Download the files and simply run:
-'''
+Download the files, go to terminal and simply run:
+```
 python geeksScrape.py
-'''
+```
