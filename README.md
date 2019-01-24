@@ -10,7 +10,7 @@ To-Do
 * Work on the over all display of the html file, it's not overly well formatted currently.
 * Test on Linux, I know it will have trouble when trying to run the os.startfile() line.
 
-# Usage
+Usage
 ------
 Download the files, go to terminal and simply run:
 ```
