@@ -1,9 +1,10 @@
 # Article-Scraper
 
-The idea for this script is to be able to run it on various web sites that I frequent and return the headlines, summaries, 
-and links to articles that are about Python.
+Currently just working for the site Geeks for Geeks, but the idea is to scrape sites I frequent for Python specific articles and return them in it's own html file with the headline, summary, and link to the full article.
+
+<img width=600px src="https://github.com/SlyCodePanda/Article-Scraper/blob/master/screenshot.JPG" />
 
 To-Do
 ------
-* Need to work out a better way to display the scraped data. Currently you need to open up an ugly Excel doc.
-* Want to implement more than just one site to scrape.
+* Scrape more than just the one site for articles.
+* Work on the over all display of the html file, it's not overly well formatted currently.
