@@ -8,3 +8,10 @@ To-Do
 ------
 * Scrape more than just the one site for articles.
 * Work on the over all display of the html file, it's not overly well formatted currently.
+
+# Usage
+------
+Download the files and simply run:
+'''
+python geeksScrape.py
+'''
