@@ -4,6 +4,13 @@ Currently just working for the site Geeks for Geeks, but the idea is to scrape s
 
 <img width=600px src="https://github.com/SlyCodePanda/Article-Scraper/blob/master/screenshot.JPG" />
 
+Modules Used
+------
+* **BeautifulSoup 4** for web scraping.
+* **Requests** library for making HTTP requests.
+* **lxml parser** used in the BeautifulSoup object.
+* **os** for opening the html file.
+
 To-Do
 ------
 * Scrape more than just the one site for articles.
